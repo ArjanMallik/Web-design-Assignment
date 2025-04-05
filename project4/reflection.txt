@@ -1,0 +1,12 @@
+After all the tests HTML and CSS were clean. But Java script had 17 warnings from jshint. Chat gpt the solution it gave me was "Set esversion: 6 in JSHint Configuration: To resolve the ES6-related warnings, I added /*jshint esversion: 6 */ at the top of the JavaScript file to enable ES6 support.
+
+Example:
+
+javascript
+Copy
+Edit
+/*jshint esversion: 6 */
+This change allows JSHint to recognize and allow ES6 features like arrow functions, template literals, and const/let keywords.
+
+Afetr that only error remained was The "'esversion' option cannot be set after any executable code" for which I could not find solution.
+/* jshint esversion: 6 */ was placed on top still the error occured. 

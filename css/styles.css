@@ -22,8 +22,11 @@ header h1 {
   font-size: 2.5rem;
 }
 
+/* Navigation */
 nav ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li {
@@ -41,33 +44,31 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Main Content */
-main {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+/* Mobile Navigation Button (Hidden by default) */
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 20px;
 }
 
-h2 {
-  color: #333;
+.nav-menu {
+  display: block; /* Show menu by default on larger screens */
 }
 
-/* Project Images */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 20px 0;
+nav ul li {
+  display: inline-block;
+  margin: 0 1rem;
 }
 
-/* Links */
-a {
-  color: #333;
+nav ul li a {
+  color: white;
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  font-weight: bold;
 }
 
 /* Mobile-First Layout */
@@ -76,10 +77,25 @@ a:hover {
     font-size: 2rem;
   }
 
-  nav ul {
-    padding: 0;
+  /* Hide the navigation menu by default */
+  .nav-menu {
+    display: none;
+    text-align: center;
   }
 
+  /* Show the mobile navigation toggle button */
+  .nav-toggle {
+    display: block;
+    font-size: 2.5rem;
+    margin-left: 20px;
+  }
+
+  /* Display the menu in block on toggle */
+  .nav-menu.active {
+    display: block;
+  }
+
+  /* Stack the navigation items vertically */
   nav ul li {
     display: block;
     margin: 1rem 0;

@@ -1,0 +1,42 @@
+/* style.css */
+/* Name: style.css
+   Author: Michael Borck, michael.borck@curtin.edu.au
+   Description: Styling for Flatland
+   Version: 1.0
+*/
+
+body {
+    font-family: "Helvetica", "Arial", sans-serif;
+    box-sizing: border-box;
+    padding-top: 40px;
+    width: 750px; /* Increase width to give more space */
+    margin: 0 auto;
+    text-align: center;  /* Center the content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;  /* Align items horizontally */
+}
+
+#words {
+    width: 250px;
+    height: 200px;
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+    margin-right: 30px;  /* More space between the words and the square */
+    border-radius: 10%;
+    border-right: 5px solid red;
+    display: inline-block; /* Keep words inline-block */
+}
+
+#square {
+    width: 200px;  /* Make the square bigger */
+    height: 200px; /* Make the square bigger */
+    background-color: gray;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    display: inline-block;  /* Make sure the square stays inline */
+    margin-top: 20px;  /* Add some space between the top and square */
+}
