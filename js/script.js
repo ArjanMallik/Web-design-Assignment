@@ -11,8 +11,8 @@ navLinks.forEach(link => {
       const targetId = this.getAttribute('href').substring(1); // Get the target section's id
       const targetSection = document.getElementById(targetId); // Get the target section element
 
-      // Scroll to the target section smoothly
       if (targetSection) {
+        // Scroll to the target section smoothly
         targetSection.scrollIntoView({
           behavior: 'smooth',
           block: 'start' // Aligns the target section at the top
