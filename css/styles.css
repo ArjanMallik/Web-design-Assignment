@@ -1,4 +1,4 @@
-/* General Styles */
+/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,132 +6,198 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Wasted Vindey', sans-serif; /* Body font */
+  background-color: #f5f5f5;
+  color: #333;
   line-height: 1.6;
-  background-color: #f4f4f4;
 }
 
-header, nav, footer {
-  text-align: center;
-  background-color: #333;
+/* Navbar Styles */
+nav {
+  background-color: #1a2b49;
   color: white;
-  padding: 1rem 0;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav ul li {
+  font-size: 1.1em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  color: #f5f5f5;
+  border-bottom: 2px solid #f5f5f5;
+}
+
+/* Mobile Navbar (Hamburger) */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+}
+
+/* Other Styles (Header, Hero, etc.) */
+header {
+  background: #1a2b49;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-family: 'Kugile', sans-serif; /* Title/Heading font */
+  margin-top: 60px;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.5em;
+  margin-bottom: 10px;
 }
 
-/* Navigation */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+header p {
+  font-size: 1.2em;
 }
 
-nav ul li {
-  display: inline-block;
-  margin: 0 1rem;
+.hero {
+  padding: 60px 20px;
+  background: #e3e3e3;
+  text-align: center;
 }
 
-nav ul li a {
+.hero h1 {
+  font-size: 3em;
+  font-family: 'Kugile', sans-serif;
+}
+
+.hero p {
+  font-size: 1.5em;
+  color: #555;
+}
+
+.SERVICES, .skills, .PROJECT {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.SERVICES h2, .skills h2, .PROJECT h2 {
+  font-size: 2.2em;
+  font-family: 'Kugile', sans-serif;
+  margin-bottom: 30px;
+}
+
+.SERVICES .service-card, .PROJECT .PROJECT-card {
+  background: #fff;
+  padding: 20px;
+  width: 250px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.SERVICES .service-card:hover, .PROJECT .PROJECT-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.SERVICES {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.PROJECT {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.PROJECT-card h3 {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  font-family: 'Kugile', sans-serif;
+}
+
+.footer {
+  background: #1a2b49;
   color: white;
-  text-decoration: none;
-  font-weight: bold;
+  padding: 20px;
+  text-align: center;
 }
 
-footer {
-  font-size: 0.9rem;
+.footer p {
+  font-size: 1em;
 }
 
-/* Mobile Navigation Button (Hidden by default) */
-.nav-toggle {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  padding: 10px;
-  margin-right: 20px;
-}
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .SERVICES {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.nav-menu {
-  display: block; /* Show menu by default on larger screens */
-}
+  .PROJECT {
+    flex-direction: column;
+    align-items: center;
+  }
 
-nav ul li {
-  display: inline-block;
-  margin: 0 1rem;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Mobile-First Layout */
-@media (max-width: 768px) {
   header h1 {
-    font-size: 2rem;
+    font-size: 2em;
   }
 
-  /* Hide the navigation menu by default */
-  .nav-menu {
-    display: none;
-    text-align: center;
+  header p {
+    font-size: 1em;
   }
 
-  /* Show the mobile navigation toggle button */
-  .nav-toggle {
-    display: block;
-    font-size: 2.5rem;
-    margin-left: 20px;
+  .hero h1 {
+    font-size: 2.5em;
   }
 
-  /* Display the menu in block on toggle */
-  .nav-menu.active {
-    display: block;
-  }
-
-  /* Stack the navigation items vertically */
-  nav ul li {
-    display: block;
-    margin: 1rem 0;
-  }
-
-  main {
-    padding: 1rem;
-  }
-}
-
-/* Tablet Layout (above 768px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  header h1 {
-    font-size: 2.2rem;
-  }
-
-  nav ul li {
-    margin: 0 0.8rem;
-  }
-
-  main {
-    padding: 1.5rem;
-  }
-}
-
-/* Desktop Layout (above 1024px) */
-@media (min-width: 1025px) {
-  header h1 {
-    font-size: 2.5rem;
-  }
-
-  nav ul li {
-    margin: 0 1.5rem;
-  }
-
-  main {
-    padding: 2rem;
+  .hero p {
+    font-size: 1.2em;
   }
 }

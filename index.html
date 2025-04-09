@@ -3,48 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arjan's Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css"> <!-- Corrected the link -->
+  <title>Arjan Mallik - PROJECT</title>
+
+  <!-- Google Fonts: Kugile and Wasted Vindey -->
+  <link href="https://fonts.googleapis.com/css2?family=Kugile&family=Wasted+Vindey&display=swap" rel="stylesheet">
+
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="hamburger" id="hamburger" onclick="toggleNav()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul id="navbar">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#SERVICES">SERVICES</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#PROJECT">PROJECT</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <!-- Header Section -->
-  <header>
-    <h1>Welcome to My Portfolio</h1>
-    <p>Hi, I'm Arjan! I specialize in Business Information Systems and Web Development.</p>
-
-    <!-- Mobile Navigation Button -->
-    <button class="nav-toggle">☰</button>
-
-    <!-- Navigation Menu -->
-    <nav class="nav-menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="project1/project1.html">Project 1</a></li>
-        <li><a href="project2/project2.html">Project 2</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <header id="home">
+    <h1>Arjan Mallik - PROJECT</h1>
+    <p>Business Information Systems Student</p>
   </header>
+  
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <h1>Arjan Mallik</h1>
+    <p>Business Information Systems Student</p>
+    <p>Hi, I’m Arjan Mallik, a final-year student at Curtin University specializing in Business Analytics and Advanced Technologies.</p>
+  </section>
 
-  <!-- Main Content Section -->
-  <main>
-    <section>
-      <h2>My Projects</h2>
-      <p>Check out some of my previous work:</p>
-      <ul>
-        <li><a href="project1/index.html">Week 2: Basic Webpage (HTML & CSS)</a></li>
-        <li><a href="project2/index.html">Week 3: Rock Paper Scissors Game (JS)</a></li>
-        <li><a href="project3/index.html">Week 4: Flatland Business Advisor (DOM)</a></li>
-        <li><a href="project4/index.html">Week 5: RSS Reader (API Fetch)</a></li>
-      </ul>
-    </section>
-  </main>
+  <!-- SERVICES Section -->
+  <section class="SERVICES" id="SERVICES">
+    <h2>SERVICES</h2>
+    <div class="service-card">
+      <h3>Data Analytics & BI</h3>
+      <p>Power BI and SQL for data visualization.</p>
+    </div>
+    <div class="service-card" onclick="redirectToWebsite()">
+      <h3>Programming</h3>
+      <p>Python, Java, HTML, CSS, WordPress. Click to visit my <strong>website</strong>.</p>
+    </div>
+    <div class="service-card">
+      <h3>Database Development</h3>
+      <p>Designing efficient databases.</p>
+    </div>
+  </section>
+  
+  <!-- Script to handle the redirection -->
+  <script>
+    function redirectToWebsite() {
+      window.location.href = "https://therisophy.com";
+    }
+  </script>
+  
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <h2>Skills</h2>
+    <p>Data Analytics: 85% | Programming: 80% | Web Development: 75% | Leadership: 90%</p>
+  </section>
+
+  <!-- PROJECT Section -->
+  <section class="PROJECT" id="PROJECT">
+    <h2>PROJECT</h2>
+    <div class="PROJECT-card">
+      <h3>Python & Power BI SERVICES</h3>
+      <p>Data Analysis & Visualization</p>
+    </div>
+    <div class="PROJECT-card">
+      <h3>Database Development</h3>
+      <p>Sports Competition Databases</p>
+    </div>
+    <div class="PROJECT-card">
+        <h3><a href="project-details.html">Web Development PROJECT</a></h3>
+        <p>HTML, CSS, JavaScript</p>
+      </div>
+  </section>
 
   <!-- Footer Section -->
-  <footer>
-    <p>&copy; 2025 Arjan Mallik</p>
+  <footer class="footer" id="contact">
+    <p>arjan21mallik@gmail.com | (461) 0449228297 | Perth, Western Australia</p>
   </footer>
 
-  <script src="js/script.js"></script> <!-- External JavaScript -->
+  <!-- Script for Hamburger Menu -->
+  <script>
+    function toggleNav() {
+      const navbar = document.getElementById("navbar");
+      navbar.classList.toggle("active");
+    }
+  </script>
+
+  <!-- Link to external JavaScript file -->
+  <script src="js/script.js"></script>
 </body>
 </html>
