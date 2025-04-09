@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arjan Mallik - PROJECT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Google Fonts: Kugile and Wasted Vindey -->
-  <link href="https://fonts.googleapis.com/css2?family=Kugile&family=Wasted+Vindey&display=swap" rel="stylesheet">
 
-  <!-- Link to external CSS file -->
+  <!-- Link to external CSS -->
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Link to external JS -->
+  <script src="js/script.js" defer></script>
+
 </head>
+
 <body>
   <!-- Navigation Bar -->
   <nav>
@@ -20,73 +25,93 @@
       <div></div>
     </div>
     <ul id="navbar">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#SERVICES">SERVICES</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#PROJECT">PROJECT</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Header Section -->
-  <header id="home">
-    <h1>Arjan Mallik - PROJECT</h1>
-    <p>Business Information Systems Student</p>
-  </header>
-  
-  <!-- Hero Section -->
-  <section class="hero" id="hero">
-    <h1>Arjan Mallik</h1>
-    <p>Business Information Systems Student</p>
-    <p>Hi, I’m Arjan Mallik, a final-year student at Curtin University specializing in Business Analytics and Advanced Technologies.</p>
-  </section>
 
-  <!-- SERVICES Section -->
-  <section class="SERVICES" id="SERVICES">
-    <h2>SERVICES</h2>
-    <div class="service-card">
-      <h3>Data Analytics & BI</h3>
-      <p>Power BI and SQL for data visualization.</p>
+<!-- About Me Section -->
+<section id="about-me">
+  <img src="images/arjan.jpeg" alt="Arjan Mallik">
+  <div class="content">
+    <h2>Arjan Mallik</h2>
+    <p class="about-paragraph">Hi, I’m Arjan Mallik, a final-year Business Information Systems student at Curtin University, specializing in Business Analytics and Advanced Technologies. I’m passionate about using data to solve real-world problems and drive decisions. In my spare time, I enjoy developing projects, honing my tech skills, and keeping up with the latest trends...</p>
+    <p>Email: arjan21mallik@gmail.com</p>
+    <p>University: Curtin University</p>
+    <!-- Link to the actual resume.pdf -->
+    <button onclick="window.location.href='resume.pdf'">Download Resume</button>
+    <button onclick="window.location.href='#education'">Learn More</button>
+  </div>
+</section>
+
+
+
+<!-- Education Section -->
+<section class="education">
+  <h2>Education</h2>
+  <div class="education-items-container">
+    <!-- Curtin University -->
+    <div class="education-item">
+      <p>Curtin University</p>
+      <div class="education-details">
+        <p><strong>Degree:</strong> BCom</p>
+        <p><strong>Major </strong> Information Systems (Extended Program)</p>
+        <p><strong>Specializations:</strong> Business Analytics, Advanced Business Technologies</p>
+        <p><strong>Expected Graduation:</strong> 2026</p>
+      </div>
     </div>
-    <div class="service-card" onclick="redirectToWebsite()">
-      <h3>Programming</h3>
-      <p>Python, Java, HTML, CSS, WordPress. Click to visit my <strong>website</strong>.</p>
+
+    <!-- Chittagong Independent University -->
+    <div class="education-item">
+      <p>Chittagong Independent University</p>
+      <div class="education-details">
+        <p><strong>Degree:</strong> BBA, 1 Year</p>
+        <p><strong>Major:</strong> Management Information Systems</p>
+        <p><strong>Transfer:</strong> Credits transferred to Curtin University</p>
+      </div>
     </div>
-    <div class="service-card">
-      <h3>Database Development</h3>
-      <p>Designing efficient databases.</p>
-    </div>
-  </section>
-  
-  <!-- Script to handle the redirection -->
-  <script>
-    function redirectToWebsite() {
-      window.location.href = "https://therisophy.com";
-    }
-  </script>
-  
+  </div>
+</section>
 
   <!-- Skills Section -->
-  <section class="skills" id="skills">
-    <h2>Skills</h2>
-    <p>Data Analytics: 85% | Programming: 80% | Web Development: 75% | Leadership: 90%</p>
-  </section>
-
-  <!-- PROJECT Section -->
-  <section class="PROJECT" id="PROJECT">
-    <h2>PROJECT</h2>
-    <div class="PROJECT-card">
-      <h3>Python & Power BI SERVICES</h3>
-      <p>Data Analysis & Visualization</p>
-    </div>
-    <div class="PROJECT-card">
-      <h3>Database Development</h3>
-      <p>Sports Competition Databases</p>
-    </div>
-    <div class="PROJECT-card">
-        <h3><a href="project-details.html">Web Development PROJECT</a></h3>
-        <p>HTML, CSS, JavaScript</p>
+<section class="skills">
+  <h2>Skills</h2>
+  <div class="skills-items-container">
+    <div class="skill-button">
+      <p>Leadership</p>
+      <div class="skill-details">
+        <p>Experience in leading teams, motivating staff, and managing operations effectively.</p>
       </div>
+    </div>
+    <div class="skill-button">
+      <p>Programming</p>
+      <div class="skill-details">
+        <p>Skilled in Python, Java, HTML, CSS, and WordPress development.</p>
+      </div>
+    </div>
+    <div class="skill-button">
+      <p>Project Management</p>
+      <div class="skill-details">
+        <p>Expertise in managing projects, timelines, and client relations.</p>
+      </div>
+    </div>
+    <!-- Add more skills as needed -->
+  </div>
+</section>
+
+
+  <!-- PROJECT Section (Portfolio with Buttons for Projects and Researches) -->
+  <section class="PROJECT" id="PROJECT">
+    <h2>Portfolio</h2>
+    <div class="portfolio-button" onclick="window.location.href='projects.html'">
+      <p>Projects</p>
+    </div>
+    <div class="portfolio-button" onclick="window.location.href='researches.html'">
+      <p>Researches</p>
+    </div>
   </section>
 
   <!-- Footer Section -->
@@ -100,9 +125,16 @@
       const navbar = document.getElementById("navbar");
       navbar.classList.toggle("active");
     }
-  </script>
 
-  <!-- Link to external JavaScript file -->
-  <script src="js/script.js"></script>
+    // Expand and collapse skills details
+    function expandSkill(skillId) {
+      document.getElementById(skillId + "-details").style.display = "block";
+    }
+
+    function collapseSkill(skillId) {
+      document.getElementById(skillId + "-details").style.display = "none";
+    }
+  </script>
 </body>
+
 </html>
