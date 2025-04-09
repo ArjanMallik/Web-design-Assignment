@@ -12,15 +12,27 @@ navLinks.forEach(link => {
       const targetSection = document.getElementById(targetId); // Get the target section element
 
       // Scroll to the target section smoothly
-      targetSection.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start' // Aligns the target section at the top
-      });
+      if (targetSection) {
+        targetSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start' // Aligns the target section at the top
+        });
+      } else {
+        console.error("Target section not found:", targetId); // Log error if section is not found
+      }
 
       // Toggle the 'active' class to hide the menu after a click (for hamburger menu)
       const navMenu = document.querySelector('nav ul');
       navMenu.classList.remove('active');
     }
     // If it's an external link (e.g., to another HTML page), no smooth scroll, just normal navigation
+    else if (this.getAttribute('href').startsWith('http')) {
+      window.open(this.getAttribute('href'), '_blank'); // Open external links in a new tab
+    }
   });
 });
+
+// Optional: Adding ARIA roles for accessibility
+document.querySelector('.hamburger').setAttribute('role', 'button');
+document.querySelector('.hamburger').setAttribute('aria-expanded', 'false');
+document.querySelector('nav').setAttribute('role', 'navigation');
