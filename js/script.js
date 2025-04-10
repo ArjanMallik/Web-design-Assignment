@@ -38,3 +38,4 @@ navLinks.forEach(link => {
 document.querySelector('.hamburger').setAttribute('role', 'button');
 document.querySelector('.hamburger').setAttribute('aria-expanded', 'false');
 document.querySelector('nav').setAttribute('role', 'navigation');
+
