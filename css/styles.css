@@ -6,11 +6,6 @@
 }
 
 
-/* Enable smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
 
 body {
   font-family: 'Poppins', sans-serif; /* Body font */
@@ -106,7 +101,7 @@ header {
   color: white;
   padding: 20px 0;
   text-align: center;
-  font-family: 'Kugile', sans-serif; /* Title/Heading font */
+  font-family: 'poppins', sans-serif; /* Title/Heading font */
   margin-top: 60px;
 }
 
@@ -434,22 +429,13 @@ section {
 .contact-info div p {
   font-size: 18px;
   color: #333;
-  font-family: 'Arial', sans-serif;
+  font-family: 'poppins', sans-serif;
 }
 
 .contact-info div a {
   color: #0077b5;
   text-decoration: none;
   font-weight: bold;
-}
-
-.contact-info div a:hover {
-  text-decoration: underline;
-}
-
-.contact-info div p:last-child {
-  font-style: italic;
-  color: #666;
 }
 
 
